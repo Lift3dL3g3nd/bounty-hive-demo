@@ -1,0 +1,35 @@
+{
+  "finding_id": "bh_demo_finding_01",
+  "title": "Authorization boundary weakness (redacted)",
+  "summary": "A weakness was detected near an authorization boundary. Details are redacted pre-purchase.",
+  "severity": "high",
+  "confidence": 0.78,
+  "affected_surface": {
+    "asset_kind": "web_app",
+    "asset_ref": "REDACTED_ASSET",
+    "component": "REDACTED_COMPONENT"
+  },
+  "impact": {
+    "user_data_risk": "potential",
+    "integrity_risk": "potential",
+    "availability_risk": "low"
+  },
+  "what_is_redacted": [
+    "exact endpoint/route",
+    "parameter names",
+    "request shapes",
+    "precise access control condition",
+    "reproduction steps",
+    "any exploitability details"
+  ],
+  "safe_recommendations": [
+    "Audit authorization checks at the boundary (server-side enforcement).",
+    "Add regression tests for role/tenant isolation.",
+    "Add structured authorization logging for denied/allowed decisions."
+  ],
+  "state_machine": {
+    "state": "created",
+    "allowed_next": ["validated"],
+    "note": "No actionable reproduction steps are present in this package."
+  }
+}

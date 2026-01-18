@@ -1,0 +1,23 @@
+{
+  "redaction_level": "pre_purchase",
+  "redacted_fields": [
+    "dependency_coordinates",
+    "versions",
+    "pipeline_steps",
+    "tokens_and_secrets",
+    "reproduction",
+    "any exploitability details"
+  ],
+  "release_conditions": {
+    "requires": ["approved", "purchased"],
+    "entitlement": "engine_full_delivery"
+  },
+  "customer_visible_now": [
+    "title",
+    "summary",
+    "severity",
+    "confidence",
+    "high-level mitigation guidance",
+    "audit metadata"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "finding_id": "bh_demo_finding_02",
+  "title": "Dependency / build integrity concern (redacted)",
+  "summary": "A build/dependency integrity risk was detected. Details are redacted pre-purchase.",
+  "severity": "medium",
+  "confidence": 0.73,
+  "affected_surface": {
+    "asset_kind": "ci_cd",
+    "asset_ref": "REDACTED_PIPELINE",
+    "component": "REDACTED_DEPENDENCY_CHAIN"
+  },
+  "impact": {
+    "user_data_risk": "unknown",
+    "integrity_risk": "potential",
+    "availability_risk": "low"
+  },
+  "what_is_redacted": [
+    "specific dependency coordinates",
+    "exact version constraints",
+    "build steps",
+    "any tampering or misuse mechanics",
+    "reproduction steps"
+  ],
+  "safe_recommendations": [
+    "Enable dependency locking and provenance (SBOM + signature verification).",
+    "Harden CI secrets access and reduce token scope.",
+    "Add build attestations and verify at deploy time."
+  ],
+  "state_machine": {
+    "state": "created",
+    "allowed_next": ["validated"],
+    "note": "This package contains no actionable supply-chain attack detail."
+  }
+}

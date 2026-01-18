@@ -1,0 +1,6 @@
+REDACTED PRE-PURCHASE EVIDENCE STUB
+
+This is a non-actionable placeholder.
+It demonstrates the disclosure package structure and custody rules.
+
+No dependency names, versions, build steps, or reproduction details are included.

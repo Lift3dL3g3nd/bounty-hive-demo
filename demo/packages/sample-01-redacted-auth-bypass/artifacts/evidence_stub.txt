@@ -1,0 +1,10 @@
+REDACTED PRE-PURCHASE EVIDENCE STUB
+
+This is intentionally non-actionable.
+It demonstrates artifact custody and redaction.
+
+Included:
+- Finding summary metadata
+- No endpoints
+- No payloads
+- No reproduction steps

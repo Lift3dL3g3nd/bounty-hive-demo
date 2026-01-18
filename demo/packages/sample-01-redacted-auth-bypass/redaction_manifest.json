@@ -1,0 +1,24 @@
+{
+  "redaction_level": "pre_purchase",
+  "redacted_fields": [
+    "asset_ref",
+    "component",
+    "endpoints",
+    "parameters",
+    "reproduction",
+    "payloads",
+    "logs_with_identifiers"
+  ],
+  "release_conditions": {
+    "requires": ["approved", "purchased"],
+    "entitlement": "engine_full_delivery"
+  },
+  "customer_visible_now": [
+    "title",
+    "summary",
+    "severity",
+    "confidence",
+    "high-level mitigation guidance",
+    "audit metadata"
+  ]
+}
