@@ -1,0 +1,29 @@
+{
+  "redaction_level": "pre_purchase_validated",
+  "redacted_fields": [
+    "state_machine_details",
+    "transition_conditions",
+    "trigger_inputs",
+    "execution_order",
+    "reproduction_steps",
+    "any exploit or abuse narrative"
+  ],
+  "release_conditions": {
+    "requires": ["approved", "purchased"],
+    "entitlement": "engine_full_delivery"
+  },
+  "customer_visible_now": [
+    "title",
+    "summary",
+    "severity",
+    "confidence",
+    "validation_receipt",
+    "safe_recommendations",
+    "audit_metadata"
+  ],
+  "explicitly_withheld": [
+    "proof-of-concept mechanics",
+    "attack narratives",
+    "step-by-step guidance"
+  ]
+}

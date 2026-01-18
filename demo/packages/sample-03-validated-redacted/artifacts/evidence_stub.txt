@@ -1,0 +1,11 @@
+VALIDATED — PRE-PURCHASE EVIDENCE STUB
+
+This artifact confirms that validation occurred.
+
+It intentionally excludes:
+- state diagrams
+- transition sequences
+- triggering inputs
+- reproduction steps
+
+Evidence remains sealed until approval + purchase.

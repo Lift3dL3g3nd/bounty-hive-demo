@@ -1,0 +1,44 @@
+{
+  "package_version": "1.0",
+  "package_kind": "engine_disclosure_package",
+  "package_id": "bh_demo_pkg_03",
+  "created_utc": "2026-01-17T00:00:00Z",
+  "last_updated_utc": "2026-01-18T00:00:00Z",
+  "lifecycle_state": "validated",
+  "visibility": "redacted_pre_purchase",
+  "policy_snapshot": {
+    "name": "BH_CORE_FREEZE_POLICY",
+    "version": "v0.1",
+    "sha256": "REDACTED_POLICY_HASH_PLACEHOLDER"
+  },
+  "org_ref": {
+    "target_org": "demo_target_org",
+    "program_ref": "demo_program_001"
+  },
+  "artifact_refs": [
+    {
+      "name": "sealed_finding",
+      "path": "sealed_finding.json",
+      "sha256": "REDACTED_SHA256_PLACEHOLDER"
+    },
+    {
+      "name": "validation_receipt",
+      "path": "validation_receipt.json",
+      "sha256": "REDACTED_SHA256_PLACEHOLDER"
+    },
+    {
+      "name": "redaction_manifest",
+      "path": "redaction_manifest.json",
+      "sha256": "REDACTED_SHA256_PLACEHOLDER"
+    },
+    {
+      "name": "evidence_stub",
+      "path": "artifacts/evidence_stub.txt",
+      "sha256": "REDACTED_SHA256_PLACEHOLDER"
+    }
+  ],
+  "signatures": {
+    "engine_signing_key_id": "engine_demo_key_01",
+    "package_signature": "REDACTED_SIGNATURE_PLACEHOLDER"
+  }
+}

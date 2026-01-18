@@ -1,0 +1,36 @@
+{
+  "finding_id": "bh_demo_finding_03",
+  "title": "State transition logic weakness (validated, redacted)",
+  "summary": "A weakness related to state transition handling was validated under controlled conditions. Details remain redacted pre-purchase.",
+  "severity": "high",
+  "confidence": 0.91,
+  "affected_surface": {
+    "asset_kind": "service",
+    "asset_ref": "REDACTED_SERVICE",
+    "component": "REDACTED_STATE_HANDLER"
+  },
+  "impact": {
+    "user_data_risk": "potential",
+    "integrity_risk": "high",
+    "availability_risk": "low"
+  },
+  "what_is_redacted": [
+    "state names",
+    "transition conditions",
+    "triggering inputs",
+    "execution ordering",
+    "any reproduction steps",
+    "any bypass or abuse mechanics"
+  ],
+  "safe_recommendations": [
+    "Add explicit state transition guards and invariants.",
+    "Log and alert on unexpected state changes.",
+    "Introduce property-based tests for state machines."
+  ],
+  "state_machine": {
+    "state": "validated",
+    "previous": "created",
+    "allowed_next": ["approved"],
+    "note": "Validation confirms the issue exists without disclosing exploit mechanics."
+  }
+}

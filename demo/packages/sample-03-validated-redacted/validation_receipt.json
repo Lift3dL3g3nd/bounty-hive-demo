@@ -1,0 +1,29 @@
+{
+  "receipt_kind": "validation_receipt",
+  "finding_id": "bh_demo_finding_03",
+  "validated_utc": "2026-01-18T02:14:11Z",
+  "validation_method": "defensive_confirmation_only",
+  "validation_scope": {
+    "environment": "isolated_engine_sandbox",
+    "real_customer_assets": false,
+    "external_network_access": false
+  },
+  "assertions": [
+    "finding_exists",
+    "finding_is_reproducible_under_controlled_conditions",
+    "no weaponized output produced",
+    "no actionable steps included in this package"
+  ],
+  "confidence_delta": {
+    "before": 0.67,
+    "after": 0.91
+  },
+  "validator_identity": {
+    "agent": "ValidationEngineer",
+    "engine_instance_id": "engine-demo-instance-01"
+  },
+  "audit": {
+    "receipt_hash": "REDACTED_RECEIPT_HASH_PLACEHOLDER",
+    "previous_receipt_hash": "REDACTED_PREVIOUS_HASH_PLACEHOLDER"
+  }
+}
