@@ -1,0 +1,19 @@
+{
+  "policy_id": "red-team-only",
+  "description": "High-risk security artifacts are restricted to authorized red team environments only.",
+  "artifact_risk_level": "high",
+  "allowed_use": [
+    "security testing",
+    "red team",
+    "vulnerability research",
+    "authorized penetration testing"
+  ],
+  "disallowed_use": [
+    "production deployment",
+    "unauthorized execution",
+    "offensive operations without approval"
+  ],
+  "approval_required": true,
+  "audit_required": true,
+  "receipt_required": true
+}

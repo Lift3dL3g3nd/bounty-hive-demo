@@ -1,0 +1,50 @@
+name: Bounty-Hive Governance Demo
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  governance:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Demo Repo
+        uses: actions/checkout@v4
+
+      - name: Checkout Private Bounty-Hive Repo
+        uses: actions/checkout@v4
+        with:
+          repository: Lift3dL3g3nd/bounty-hive
+          token: ${{ secrets.bounty-hive-actions-workflow }}
+          path: bounty-hive
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Bounty-Hive Engine
+        run: |
+          cd bounty-hive
+          pip install -e .
+
+      - name: Show Demo Repo Contents
+        run: |
+          echo "Demo repo files:"
+          ls -R
+
+      - name: Show Private Repo Contents
+        run: |
+          echo "Private bounty-hive repo files:"
+          ls -R bounty-hive
+
+      - name: Create Output Folder
+        run: |
+          mkdir -p output
+
+      - name: Upload Output
+        uses: actions/upload-artifact@v4
+        with:
+          name: bounty-hive-output
+          path: output/
