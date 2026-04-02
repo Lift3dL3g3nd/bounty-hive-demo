@@ -1,5 +1,4 @@
 name: Bounty-Hive Governance Demo
-name: Bounty-Hive Governance Demo
 
 on:
   workflow_dispatch:
