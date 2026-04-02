@@ -29,16 +29,12 @@ jobs:
           cd bounty-hive
           pip install -e .
 
-      - name: Run Governance Demo
+      - name: Run Bounty-Hive Governance
         run: |
-          mkdir -p output
-          python -m bounty_hive \
-            --artifacts demo_artifacts \
-            --policy policies \
-            --output output
+          bounty-hive run demo_program --out-dir demo_program/output
 
-      - name: Upload Output
+      - name: Upload Governance Output
         uses: actions/upload-artifact@v4
         with:
           name: bounty-hive-output
-          path: output/
+          path: demo_program/output/
