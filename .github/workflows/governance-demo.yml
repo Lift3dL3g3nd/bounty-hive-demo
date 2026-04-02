@@ -29,19 +29,13 @@ jobs:
           cd bounty-hive
           pip install -e .
 
-      - name: Show Demo Repo Contents
-        run: |
-          echo "Demo repo files:"
-          ls -R
-
-      - name: Show Private Repo Contents
-        run: |
-          echo "Private bounty-hive repo files:"
-          ls -R bounty-hive
-
-      - name: Create Output Folder
+      - name: Run Governance Demo
         run: |
           mkdir -p output
+          python -m bounty_hive \
+            --artifacts demo_artifacts \
+            --policy policies \
+            --output output
 
       - name: Upload Output
         uses: actions/upload-artifact@v4
