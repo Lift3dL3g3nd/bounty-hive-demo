@@ -1,0 +1,27 @@
+name: Test Private Repo Access
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  test-access:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Demo Repo
+        uses: actions/checkout@v4
+
+      - name: Checkout Private Bounty-Hive Repo
+        uses: actions/checkout@v4
+        with:
+          repository: Lift3dL3g3nd/bounty-hive
+          token: ${{ secrets.BOUNTYHIVE_TOKEN }}
+          path: bounty-hive
+
+      - name: Show Files
+        run: |
+          echo "Demo repo files:"
+          ls -la
+          echo "Private bounty-hive repo files:"
+          ls -la bounty-hive
