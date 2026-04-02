@@ -1,0 +1,18 @@
+Proof of Concept Payload
+-----------------------
+
+This file represents a high-risk security artifact such as:
+
+- Exploit proof of concept
+- Vulnerability reproduction
+- Security testing payload
+- Red team tool output
+- Automated scanner artifact
+
+In a real workflow, artifacts like this would be evaluated by governance
+policies before being admitted into repositories, pipelines, or deployment
+systems.
+
+Artifact ID: DEMO-POC-001
+Classification: High Risk
+Origin: Security Research
