@@ -16,6 +16,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: Lift3dL3g3nd/bounty-hive
+          ref: feature/local-program-support
           token: ${{ secrets.BOUNTYHIVE_TOKEN }}
           path: bounty-hive
 
