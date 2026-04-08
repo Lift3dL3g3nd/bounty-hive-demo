@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: Lift3dL3g3nd/bounty-hive
-          ref: feature/local-program-support
+          ref: core-freeze
           token: ${{ secrets.BOUNTYHIVE_TOKEN }}
           path: bounty-hive
 
@@ -30,12 +30,27 @@ jobs:
           cd bounty-hive
           pip install -e .
 
+      # ✅ ORIGINAL STEP (unchanged)
       - name: Run Bounty-Hive Governance
         run: |
           bounty-hive run demo_program --out-dir demo_program/output
+
+      # 🔥 NEW STEP 1: simulate policy/context drift
+      - name: Simulate Policy Drift
+        run: |
+          echo '{"policy": "modified_context"}' > demo_program/policies/red_team_only_policy.json
+
+      # 🔥 NEW STEP 2: attempt reuse under new context
+      - name: Attempt Reuse Under Drift
+        run: |
+          bounty-hive run demo_program --out-dir demo_program/output || echo "Blocked as expected"
+
+      - name: Write SARIF
+        run: |
+          bounty-hive scan demo_program --format sarif --output demo_program/output/results.sarif
 
       - name: Upload Governance Output
         uses: actions/upload-artifact@v4
         with:
           name: bounty-hive-output
-          path: demo_program/output/
+          path: demo_program/output

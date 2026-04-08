@@ -1,0 +1,16 @@
+{
+  "program": "/home/lift3dl3g3nd/Desktop/Work/recovery/bounty-hive-demo/demo_program",
+  "artifacts": [
+    {
+      "file": "poc_payload.txt",
+      "sha256": "da5702c5479d55ca36e944395c252fc68a6c1e57cb1d3a1ea504fecbd577405c"
+    }
+  ],
+  "policy_files": [
+    {
+      "file": "red_team_only_policy.json",
+      "sha256": "902130fc49dcaee43b1b1b38178fb80301017ee1f28415f5d1016a4d0f07c4f8"
+    }
+  ],
+  "intake_time": "2026-04-02T22:18:11.215479Z"
+}
